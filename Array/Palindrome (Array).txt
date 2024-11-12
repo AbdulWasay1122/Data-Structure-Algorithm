@@ -1,0 +1,19 @@
+package palindrome;
+public class Palindrome {
+    public static void main(String[] args) {
+       String arr[]={"Abdul Wasay","Dark Knight","level"};
+       for(String word: arr ){
+           if(Palindrome(word)){
+               System.out.println(word+ " is a Palindrome.");
+           }
+           else{
+               System.out.println(word+" is not a Palindrome.");
+           }
+       }
+    }
+    
+    public static boolean Palindrome(String w){
+        String reversed =new StringBuilder(w).reverse().toString();
+        return w.equals(reversed);
+    }
+}

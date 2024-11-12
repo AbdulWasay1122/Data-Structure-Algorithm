@@ -1,0 +1,16 @@
+package sum.array;
+public class SumArray {
+    public static void main(String[] args) {
+        int arr[]={17,2,32,42,65,98};
+        int sum=sumArray(arr,arr.length-1);
+        System.out.println("The sum of elements in the array is: "+sum);
+    }
+    
+    public static int sumArray(int[] arr, int n) {
+        if (n < 0) {
+            return 0;
+        } else {
+            return arr[n] + sumArray(arr, n - 1); 
+        }
+    }
+}

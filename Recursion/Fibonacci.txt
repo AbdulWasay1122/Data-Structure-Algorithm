@@ -1,0 +1,24 @@
+package fibonacci;
+import java.util.*;
+public class Fibonacci {
+    private static Map<Integer, Long> cache = new HashMap<>();
+    public static long calculateFibonacci(int num) { 
+        if (num <= 1) {
+            return num;
+        }
+        if (cache.containsKey(num)) {
+            return cache.get(num);
+        }
+        long fib = calculateFibonacci(num - 1) + calculateFibonacci(num - 2);
+        cache.put(num, fib);
+        return fib;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the term (N) to find in the Fibonacci series: ");
+        int n = scanner.nextInt();
+        long nFibonacci = calculateFibonacci(n);
+        System.out.println("The " + n + "-th term in the Fibonacci series is: " + nFibonacci);
+    }
+}

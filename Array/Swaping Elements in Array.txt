@@ -1,0 +1,17 @@
+package array;
+import java.util.*;
+public class Array {
+    public static void main(String[] args) {
+        int arr[]={96,84,75,51};
+        int arr1[]={21,42,56,71};
+        System.out.println("BEfore Swap:");
+        System.out.println("Array 1 : "+Arrays.toString(arr));
+        System.out.println("Array 2 : "+Arrays.toString(arr1));
+        int temp[]= arr;
+        arr=arr1;
+        arr1=temp;
+        System.out.println("After Swap:");
+        System.out.println("Array 1 : "+Arrays.toString(arr));
+        System.out.println("Array 2 : "+Arrays.toString(arr1));
+    }   
+}

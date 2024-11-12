@@ -1,0 +1,21 @@
+package strings;
+
+public class Strings {
+    public static void main(String[] args) {
+        String s1 = "Hello";
+        String s2 = " Fakeshadow";
+        String s3 = " Hope you are doing";
+        String s4 = " fine today";
+        String s5 = ":";
+
+        String concat = s1 + s2 + s3 + s4 + s5;
+
+        System.out.println(concat);
+
+        s4 = s4.toUpperCase();
+        System.out.println("String 4 (Upper Case): " + s4);
+
+        String substring = concat.substring(8);
+        System.out.println("Substring from 8th character: " + substring);
+    }
+}

@@ -1,0 +1,38 @@
+package split;
+import java.util.*;
+public class Split {
+     private int[] array;
+
+    public Split(int[] array){
+        this.array = array;
+    }
+    public void splitArrayByKey(int key) {
+        int index = findKeyIndex(key);
+        if (index != -1) {
+            int[] firstPart = new int[index];
+            System.arraycopy(array, 0, firstPart, 0, index);
+
+            int[] secondPart = new int[array.length - index - 1];
+            System.arraycopy(array, index + 1, secondPart, 0, secondPart.length);
+
+            System.out.println("First part: " + Arrays.toString(firstPart));
+            System.out.println("Second part: " + Arrays.toString(secondPart));
+        } else {
+            System.out.println("Key not found in the array.");
+        }
+    }
+    private int findKeyIndex(int key) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == key) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    public static void main(String[] args) {
+        int[] array = {10, 24, 37, 44, 58, 69, 73, 81, 99};
+        int val = 44;
+        Split s = new Split(array);
+        s.splitArrayByKey(val);
+    }
+}

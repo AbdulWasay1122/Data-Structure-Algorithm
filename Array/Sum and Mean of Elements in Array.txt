@@ -1,0 +1,16 @@
+package sum.mean;
+public class SumMean {
+ public static void main(String[] args) {
+        double[] num = {12.7,21.9,34.5,49.1,53.8,63.4,78.9};
+
+        double sum = 0.0;
+        for (double no : num) {
+            sum += no;
+        }
+        
+        double mean = sum / num.length;
+        
+        System.out.println("Sum of elements: " + sum);
+        System.out.println("Mean of elements: " + mean);
+    }
+}

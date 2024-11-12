@@ -1,0 +1,18 @@
+package name;
+
+public class Name {
+    public static void main(String[] args) {
+        String s="Strange Supreme";
+        System.out.println("Original string: "+s);
+        String r=reversed(s);
+        System.out.println("Reversed Name: "+r);
+    }
+    
+    public static String reversed(String s){
+        if (s.isEmpty()){
+            return s;
+        }
+        return reversed(s.substring(1))+s.charAt(0);
+        
+    }
+}

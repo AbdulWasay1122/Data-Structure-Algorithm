@@ -1,0 +1,21 @@
+package numberconversion;
+
+public class NumberConversionDemo {
+
+    public static void main(String[] args) {
+        int num = 241;
+        Integer num1 = num;
+        System.out.println("Autoboxing int: " + num1);
+
+        Integer no = 100;
+        int no1 = no;
+        System.out.println("Unboxing int: " + no1);
+
+        String number = "200";
+        int parsedInt = Integer.parseInt(number);
+        System.out.println("Parsed String to int using parseInt: " + parsedInt);
+
+        String numToStr = Integer.toString(num);
+        System.out.println("Converted int to String using toString: " + numToStr);
+    }
+}

@@ -1,0 +1,13 @@
+package com.example.mypackage;
+
+public class MyNewClass {
+    public static void main(String[] args) {
+        double num = 193.14;
+        Double num1;
+
+        num1 = Double.valueOf(num);
+
+        System.out.println("Primitive double: " + num);
+        System.out.println("Wrapper double: " + num1);
+    }
+}

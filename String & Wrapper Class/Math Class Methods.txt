@@ -1,0 +1,25 @@
+package strings;
+
+import java.util.Scanner;
+
+public class Mathclass {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a double: ");
+        double no = scanner.nextDouble();
+        Double nol = no;
+
+        double absval = Math.abs(num);
+        System.out.println("Absolute Value: " + absval);
+
+        double sqrt = Math.sqrt(num);
+        System.out.println("Square root: " + sqrt);
+
+        System.out.print("Enter the exponent value: ");
+        double ex = scanner.nextDouble();
+
+        double sqr = Math.pow(num, ex);
+        System.out.println("Square: " + sqr);
+    }
+}

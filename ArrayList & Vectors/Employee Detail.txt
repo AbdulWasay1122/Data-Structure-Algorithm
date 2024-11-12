@@ -1,0 +1,63 @@
+package employee;
+
+import java.util.*;
+
+class Employee implements Comparable<Employee> {
+
+    private int empId;
+    private String name;
+    private String gender;
+    private int yearOfJoining;
+
+    public Employee(int empId, String name, String gender, int yearOfJoining) {
+        this.empId = empId;
+        this.name = name;
+        this.gender = gender;
+        this.yearOfJoining = yearOfJoining;
+    }
+
+    public int getEmpId() {
+        return empId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public int getYearOfJoining() {
+        return yearOfJoining;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", yearOfJoining=" + yearOfJoining +
+                '}';
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        ArrayList<Employee> empList = new ArrayList<>();
+
+        empList.add(new Employee(101, "Alina", "Female", 2015));
+        empList.add(new Employee(102, "Robin", "Male", 2010));
+        empList.add(new Employee(103, "Danny", "Male", 2020));
+        empList.add(new Employee(104, "Julie", "Female", 2018));
+
+        System.out.println("Employees sorted by Year of Joining (using Comparable):");
+        Collections.sort(empList);
+        empList.forEach(System.out::println);
+
+        System.out.println("\nEmployees sorted by Name (using Comparator): ");
+        empList.sort(Comparator.comparing(Employee::getName));
+        empList.forEach(System.out::println);
+    }
+}

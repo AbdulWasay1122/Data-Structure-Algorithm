@@ -1,0 +1,17 @@
+package oddeven;
+import java.util.*;
+public class OddEven {
+    public static void main(String[] args) {
+        int arr[] = {145, 262, 358, 421, 587, 679, 724, 893, 915};
+        int even = 0, odd = 0;
+        for (int no : arr) {
+            if (no % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+        }
+        System.out.println("Even numbers: " + even); 
+        System.out.println("Odd numbers: " + odd);
+    }
+}

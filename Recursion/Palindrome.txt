@@ -1,0 +1,16 @@
+package palindrome;
+import java .util.*;
+public class Palindrome {
+    public static void main(String[] args) {
+        Scanner x=new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = x.nextLine();
+        String rs = new StringBuilder(str).reverse().toString();
+        if(str.equalsIgnoreCase(rs)){
+            System.out.println("YES");
+        }
+        else{
+            System.out.println("NO");
+        }
+    }
+}

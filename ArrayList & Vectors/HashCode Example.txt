@@ -1,0 +1,16 @@
+package vector;
+
+import java.util.*;
+
+public class HashCodeExample {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+
+        String inputString = scanner.nextLine();
+        int hc = inputString.hashCode();
+
+        System.out.println("Hash code of \"" + inputString + "\" is: " + hc);
+    }
+}

@@ -1,0 +1,35 @@
+
+package merging.removing;
+import java.util.*;
+public class MergingRemoving {
+     public static int[] mergeAndRemove(int[] arr1, int[] arr2) {
+        int[] mergedarr = new int[arr1.length + arr2.length];
+        System.arraycopy(arr1, 0, mergedarr, 0, arr1.length);
+        System.arraycopy(arr2, 0, mergedarr, arr1.length, arr2.length);
+
+        Set<Integer> uniqueElements = new TreeSet<>();
+        for (int num : mergedarr) {
+            uniqueElements.add(num);
+        }
+
+        int[] result = new int[uniqueElements.size()];
+        int index = 0;
+        for (int num : uniqueElements) {
+            result[index++] = num;
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = {10, 21, 34, 45};
+        int[] arr2 = {34, 44, 59, 67};
+
+        int[] merge = mergeAndRemove(arr1, arr2);
+
+        System.out.println("Merged array without duplicates:");
+        for (int num : merge) {
+            System.out.print(num + " ");
+        }
+    }
+}

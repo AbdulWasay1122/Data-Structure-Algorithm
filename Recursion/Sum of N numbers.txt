@@ -1,0 +1,22 @@
+package sum.numbers;
+import java.util.*;
+public class SumNumbers {
+    public static void main(String[] args) {
+        Scanner x=new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int n=x.nextInt();
+        int sum=sumofnumbers(n);
+        System.out.println("The sum of integers form 1 to "+n+" is : "+sum);
+        
+    }
+    
+    public static int sumofnumbers(int n){
+        if (n == 1) {
+            return 1; 
+        } else {
+            return n + sumofnumbers(n - 1); 
+            
+        }
+    
+    }
+}
